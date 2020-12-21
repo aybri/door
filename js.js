@@ -1,15 +1,18 @@
 function door() {
-    var doorImage = document.getElementById("doorImage");
-    doorExpand();
-    //window.location('emeraldimpulse7.github.io');
+    var interval = setInterval(doorExpand, 3);
+
+	function doorExpand()
+	{
+		var element = document.getElementById("doorImage");
+        var size = doorImage.height;
+        
+		if(size <=2000) {
+			element.height = size+10;
+        	element.width = size+10;
+    	} else {
+			clearInterval(interval);
+            window.location.href = 'https://emeraldimpulse7.github.io';		
+		}
+	}
 }
 
-function doorExpand()
-{
-    var size = doorImage.height;
-    if(size <= 4000)
-        doorImage.height = size+1;
-        doorImage.width = size+1;
-        setTimeout(doorExpand(), 30);
-    }
-}
