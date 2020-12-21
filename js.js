@@ -1,3 +1,5 @@
+// My dad helped me make this lmao.
+
 function door() {
     var interval = setInterval(doorExpand, 3);
 
