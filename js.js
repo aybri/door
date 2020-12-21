@@ -1,10 +1,15 @@
 function door() {
     var doorImage = document.getElementById("doorImage");
+    doorExpand();
+    //window.location('emeraldimpulse7.github.io');
+}
+
+function doorExpand()
+{
     var size = doorImage.height;
-    var loop1;
-    for (loop1 = size; loop1 < 4001; loop1++) {
-      doorImage.height = size+loop1;
-      doorImage.width = size+loop1;
+    if(size <= 4000)
+        doorImage.height = size+1;
+        doorImage.width = size+1;
+        setTimeout(doorExpand(), 30);
     }
-    window.location('emeraldimpulse7.github.io');
 }
